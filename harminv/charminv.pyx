@@ -116,12 +116,12 @@ cdef class Harminv:
         sort = np.argsort(freq)
         self.freq = freq[sort]
 
-        self.omega = self.extract('omega', np.complex)[sort]
+        self.omega = self.extract('omega', np.complex128)[sort]
 
         self.decay = self.extract('decay', np.double)[sort] / self.dt
         self.Q = self.extract('Q', np.double)[sort]
 
-        amplitude = self.extract('amplitude', np.complex)[sort]
+        amplitude = self.extract('amplitude', np.complex128)[sort]
         self.amplitude = np.abs(amplitude)
         self.phase = np.angle(amplitude)
 

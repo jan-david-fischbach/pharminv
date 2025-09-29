@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=42", "wheel", "numpy>=1.19.0,<2.0.0", "cython"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pharminv"
+description = "Python wrapper for harminv"
+version = "0.1.0"
+dependencies = [
+    "requests>=2.25.0",
+    "numpy>=1.19.0,<2.0.0",
+]
